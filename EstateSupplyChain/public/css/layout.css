@@ -1,0 +1,76 @@
+/*banner大图以上的布局 ok*/
+ul,li,div,img,p,span,a{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+div.view-banner {/*logo和导航一横栏，底色白色ok*/
+	background: #fff;
+	height: 7rem;
+	/*line-height: 7rem;*/
+	position: relative;
+}
+
+.view-logo {/*logo ok*/
+	display: inline-block;
+	width: 19rem;
+	float: left;
+	margin-top: .5rem;
+	margin-left: 5rem;
+}
+
+.view-banner ul {/*导航ok*/
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 40rem;
+	right: 15rem;
+	top: 3rem;
+	font-size: 1.5rem;
+	color: #03385d;
+	font-weight: bold;
+}
+/*删除view-lan*/
+.view-banner ul li {
+	cursor: pointer;
+}
+/*.view-banner ul ul {visibility:hidden;position:absolute;left:float;top:23px;} 
+.view-banner table {position:absolute; top:0; left:0;} 
+.view-banner ul li:hover ul, 
+.view-banner ul a:hover ul{visibility:visible;} 
+.view-banner a:hover{background:#fafafa;color:#000;border:1px solid #000;} 
+.view-banner ul ul{} 
+.view-banner ul ul li {clear:both;text-align:left;font-size:12px;} 
+.view-banner ul ul li a{display:block;width:100px;height:15px;margin:0;border:0;border-bottom:1px solid #858585;} 
+.view-banner ul ul li a:hover{border:0;background:#fafafa;border-bottom:1px solid #fff;} 
+
+/*view-kv real estate*/
+
+.view-kv {
+	position: relative;
+	height: 48rem;
+}
+
+.view-text {
+	font-family: "微软雅黑";
+	position: absolute;
+	color: #ffce21;
+	font-weight: bolder;
+	font-size: 9.5rem;
+	text-align: right;
+	left: 46rem;
+	top: 3.5rem;
+}
+
+.view-text span {
+	font-size: 2rem;
+}
+
+.view-text span span {
+	color: #03385d;
+}
+
+/*这边删掉了whitepaper*/
+/*这边删掉了view-product，就是原来想做可以滚动浏览的about us*/

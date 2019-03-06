@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>供应商输入信息</title>
+    <!-- <script type="text/javascript" src="../public/js/angular.min.js">
+        (function(window){
+            window.angular.module('insertSupplier',[])
+            .controller('addCtrl',function($scope,$http){
+                $scope.doAdd = function(){
+                    var data = JSON.stringify({
+                        estate_id: $scope.estate_id,
+                        supplier_extrainfo: $scope.supplier_extrainfo
+                        console.log($scope.estate_id);
+                    });
+                    $http.post("/insert",data).then(function(res){
+                        if(res.data.success){
+                            console.log("success");
+                        } else {
+                            console.log("failure");
+                        }
+                    },function(err){
+                        console.log(err.data);
+                    });
+                }
+            });
+        })(window);
+    </script> -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="../public/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../public/assets/css/form-elements.css">
+    <link rel="stylesheet" href="../public/assets/css/style.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="../public/assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../public/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../public/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../public/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../public/assets/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body>
+    <!-- Top menu -->
+    <!-- Top content -->
+    <div class="top-content">
+        <div class="inner-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text">
+                        <h1 style="color:#00FF00"><strong>供应商信息填写页面</strong> </h1>
+                        <div class="description"> </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3 form-box">
+                       <form role="form" action="/supplier" method="post" class="registration-form"> 
+                        <fieldset>
+                            <div class="form-top">
+                                <div class="form-top-left">
+                                    <h3>供应商</h3>
+                                    <p>请填写您的信息：</p>
+                                </div>
+                                <div class="form-top-right">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                            </div>
+                            <div class="form-bottom">
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-first-name">房产ID</label>
+                                    <input type="text" name="estate_id" placeholder="estate_id" class="form-first-name form-control" id="estate_id" ng-model="estate_id">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-last-name">原材料ID</label>
+                                    <input type="text" name="form-last-name" placeholder="raw_material_id" class="form-last-name form-control" id="raw_id">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-last-name">供应商名字</label>
+                                    <input type="text" name="form-last-name" placeholder="supplier_name" class="form-last-name form-control" id="supplier_name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-last-name">原材料名字</label>
+                                    <input type="text" name="form-last-name" placeholder="raw_name" class="form-last-name form-control" id="raw_name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only red" for="form-last-name">供应商额外信息</label>
+                                    <input type="text" name="supplier_extrainfo" placeholder="suppiler_extrainfo" class="form-last-name form-control" id="supplier_extrainfo">
+                                </div>
+                                
+                                <span id="status"></span>
+                                <button type="sumbit" class="btn btn-next" onclick="setSupplier()">提交</button>
+                            </div>
+                        </fieldset>
+                     </form> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Javascript -->
+    <script src="../public/assets/js/jquery-1.11.1.min.js"></script>
+    <script src="../public/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../public/assets/js/jquery.backstretch.min.js"></script>
+    <script src="../public/assets/js/retina-1.1.0.min.js"></script>
+    <script src="../public/assets/js/scripts.js"></script>
+    <!--  <script src="../app/app.js"></script> -->
+    <script src="../app/estate_abi.js"></script>
+    <script src="../app/buy_abi.js"></script>
+    <script src="../app/supplier.js"></script>
+    <!-- <script src="../public/js/angular.min.js"></script> -->
+    <!-- <script src="../app/insert.js"></script> -->  
+    <script src="../public/js/web3.min.js"></script>
+    <!--[if lt IE 10]>
+            <script src="../public/assets/js/placeholder.js"></script>
+        <![endif]-->
+</body>
+
+</html>

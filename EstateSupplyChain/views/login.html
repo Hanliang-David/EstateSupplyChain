@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>登录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!-- font files  -->
+    <!-- /font files  -->
+    <!-- css files -->
+    <link href="../public/css/stylelogin.css" rel='stylesheet' type='text/css' media="all" />
+    <link href="../public/css/stylelogin1.css" rel='stylesheet' type='text/css' media="all" />
+    <script language="javascript" type="text/javascript" src="../public/js/styleloginyanzhengma.js"></script>
+    <!-- /css files -->
+</head>
+
+<body onload="createCode()">
+    <div class="log">
+        <div class="content1">
+            <h2>登录</h2>
+            <form action="/login" method="post">
+                <input type="email" name="username" value="账户" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '请输入你的账户';}">
+                <input type="password" name="password" value="密码*****" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入您的密码';}">
+                <input type="text" id="input1" name="Verification Code" value="验证码" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '请输入图片中的验证码';}">
+                <input type="text" onClick="createCode()" readonly id="checkCode" class="unchanged" style="width: 80px" name="Verification Code" value="验证码图" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '';}">
+                <br />
+                <input type="radio" value="1" name="privilege" checked="checked">
+                <font color="#fff">房产商</font>
+                <input type="radio" value="2" name="privilege">
+                <font color="#fff">供应商</font>
+                <input type="radio" value="3" name="privilege">
+                <font color="#fff">顾客</font>
+                <Br />
+                <div class="button-row">
+                    <input id="Button1" onClick="validate()" type="submit" class="sign-in" value="登录">
+                    <input type="reset" class="reset" value="重置">
+                </div>
+            </form>
+            </br><a href="signup">还没有账户？点此注册</a> <a href="/">首页</a>
+        </div>
+</body>
+<div class="clear"></div>
+<div class="footer"> </div>
+</body>
+
+</html>

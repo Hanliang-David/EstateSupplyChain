@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>用户注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!-- font files  -->
+    <!-- /font files  -->
+    <!-- css files -->
+    <link href="../public/css/styleuserregister.css" rel='stylesheet' type='text/css' media="all" />
+    <!-- /css files -->
+</head>
+
+<body>
+    <div class="log">
+        <div class="content2">
+            <h2>用户注册</h2>
+            <form action="/signup" method="post">
+                <input type="email" name="username" value="邮箱" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入您的邮箱';}">
+                <input type="password" name="password" value="密码*****" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入您的密码';}">
+                <input type="password" name="repassword" value="重复密码***" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请再次输入您的密码';}">
+                <!--还没有解决密码重复检测问题-->
+                </br>
+                </br>
+                <input type="radio" value="1" name="position">
+                <font color="#fff">房产商</font>
+                <input type="radio" value="2" name="position">
+                <font color="#fff">供应商</font>
+                <input type="radio" value="3" name="position" checked="checked">
+                <font color="#fff">顾客</font>
+                <Br/>
+                </br>
+                <input type="submit" class="reset" value="注册">
+                <input type="reset" class="reset" value="重置">
+                </br>
+                </br>
+                </br>
+                <a href="login" style="margin-left:10px;margin-top:80px">已有账户？点此登录</a> <a style="margin-left:80px;margin-top:80px" href="/">首页</a>
+            </form>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+
+</html>

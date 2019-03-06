@@ -1,0 +1,12 @@
+.code {
+font-family: Arial;
+font-style: italic;
+color: #ffce21;
+border: 0;
+padding: 2px 3px;
+letter-spacing: 3px;
+font-weight: bolder;
+}
+.unchanged {
+border: 0;
+}

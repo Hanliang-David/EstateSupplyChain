@@ -1,0 +1,103 @@
+.contact-form-style-1.dark .contact-bordered input {
+				color: #ffffff;
+			}
+			
+			.foja-contact-form .book-2-col .wpcf7-form-control-wrap input {
+				padding: 20px 15px;
+			}
+			
+			.contact-form-style-1.dark .contact-bordered {
+				margin-bottom: 20px;
+			}
+			
+			.booking-form.contact-form-style-1 textarea {
+				font-family: inherit;
+				padding: 20px 15px;
+			}
+			
+			.contact-map iframe {
+				height: 520px;
+				line-height: 0;
+			}
+			
+			.contact-map p {
+				margin: 0;
+				line-height: 0;
+			}
+			
+			.elementor .blog-item .meta-wrapper .author a {
+				text-transform: uppercase;
+			}
+			
+			.foja-contact-form .book-2-col .wpcf7-form-control-wrap input,
+			.foja-contact-form .book-2-col .wpcf7-form-control-wrap select {
+				color: #000000;
+			}
+			
+			@media only screen and (max-width: 768px) {
+				.page-template-page-builder-template.header-style-2 #content,
+				.header-style-3 #content {
+					padding: 0 !important;
+				}
+				.content-related-post {
+					padding-left: 0;
+					padding-right: 0;
+				}
+				.comments-area .comment-respond form p.comment-form-author,
+				.comments-area .comment-respond form p.comment-form-email,
+				.comments-area .comment-respond form p.comment-form-url {
+					width: 100%;
+					padding: 0;
+					margin-bottom: 15px;
+				}
+				.comment-respond form p.form-submit {
+					margin-bottom: 0;
+					position: relative;
+					display: block;
+					clear: both;
+					width: 100%;
+				}
+				.comment-respond form p.form-submit input {
+					width: 100%;
+					text-align: center;
+					max-width: 100%;
+				}
+			}
+			
+			@media only screen and (max-width: 480px) {
+				.blog-single .meta-info .author:after {
+					display: none;
+				}
+				.portfolio-thumbnail.gallery-type .item {
+					width: calc(100% / 3 - 10px) !important;
+					padding: 5px !important;
+				}
+			}
+			
+			@media only screen and (max-width: 460px) {
+				.foja-contact-form input,
+				.foja-contact-form textarea,
+				.foja-contact-form select {
+					padding: 15px !important;
+					font-size: 10px;
+				}
+				.foja-contact-form .book-2-col .contact-bordered,
+				.foja-contact-form .book-2-col .book-inner-3-col {
+					width: 100%;
+					margin-right: 0;
+					margin-left: 0;
+				}
+				.comments-title h3 {
+					width: 100%;
+				}
+				.comments-title .leave-reply-link a {
+					float: left;
+					margin: 0;
+					padding-top: 20px;
+					display: block;
+				}
+				.single-post-wrap .blog {
+					padding-top: 0 !important;
+					padding-bottom: 0 !important;
+				}
+			}

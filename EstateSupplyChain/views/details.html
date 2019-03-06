@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>浏览及购买页面</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../public/assets/css/css.css">
+        <link rel="stylesheet" href="../public/assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../public/assets/font-awesome/css/font-awesome.min.css">
+		    <link rel="stylesheet" href="../public/assets/css/form-elements.css">
+        <link rel="stylesheet" href="../public/assets/css/style.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="../public/assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../public/assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../public/assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../public/assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="../public/assets/ico/apple-touch-icon-57-precomposed.png">
+        <script type="text/javascript">
+           function tz1() {
+        window.location.href = 'http://127.0.0.1:8080/myEstate';
+    }
+    </script>
+    </head>
+
+    <body style="background-image: url(../public/assets/img/backgrounds/1.jpg);">
+
+		<!-- Top menu -->
+        <!-- Top content -->
+        <div class="top-content" >	
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text" >
+                            <h1 style="color:#00FF00"><strong></strong> 详细信息</h1>
+                            <div class="description" style="color:#00FF00">
+                            	<h4>下面将依次为您显示房产相关供应商，房产商，顾客的信息!&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	                        <button type="button" onclick="tz1()">个人中心</button>
+                            	</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                        	
+                        	<form role="form" action="/details" method="post" class="registration-form">
+                        		
+                        		<fieldset>
+		                        	<div class="form-top">
+		                        		<div class="form-top-left">
+		                        			<!-- <h3>Step 1 / 3</h3> -->
+	                        			 <table>  
+  <input type="text" class="input-std" id="estate_id1" name="estate_id"placeholder="estate_id">
+  <button type="submit" class="btn-submit" id="getvalue" onclick="getSupplier();getSeller();getCustomer();">Get Details</button>
+
+  <tr><td><b><label class = "black">原材料ID：</label></td><td>:</td></b><td><span class="black" span id="getval1"></span></td></tr>
+  <tr><td><b><label class = "black">供应商名字:</label></td><td>:</td></b><td><span class="black" span id="getval2"></span></td></tr>
+  <tr><td><b><label class = "black">原材料名字:</label></td><td>:</td></b><td><span class="black" span id="getval3"></span></td></tr>
+  <tr><td><b><label class = "black">额外信息:</label></td><td>:</td></b><td><span class="black" span id="getval4" name="supplier_info">See More Details From Control</span></td></tr>
+  <tr><td><b><label class = "black">房产商名字：</label></td><td>:</td></b><td><span class="black" span id="getval5"></span></td></tr>
+  <tr><td><b><label class = "black">房产名字:</label></td><td>:</td></b><td><span class="black" span id="getval6"></span></td></tr>
+  <tr><td><b><label class = "black">房产位置:</label></td><td>:</td></b><td><span class="black" span id="getval7"></span></td></tr>
+  <tr><td><b><label class = "black">房产价格:</label></td><td>:</td></b><td><span class="black" span id="getval8" ></span></td></tr>
+  <tr><td><b><label class = "black">额外信息:</label></td><td>:</td></b><td><span class="black" span id="getval9">See More Details From Control</span></td></tr>
+  <tr><td><b><label class = "black">顾客电话:</label></td><td>:</td></b><td><span class="black" span id="getval10"></span></td></tr>
+  <tr><td><b><label class = "black">顾客名字:</label></td><td>:</td></b><td><span class="black" span id="getval11"></span></td></tr>
+  <tr><td><b><label class = "black">顾客地址:</label></td><td>:</td></b><td><span class="black" span id="getval12"></span></td></tr>
+  <tr><td><b><label class = "black">额外信息:</label></td><td>:</td></b><td><span class="black" span id="getval13">See More Details From Control</span></td></tr>
+  
+  </table>                          			
+		                        <p></p>
+		                        </div>
+		                        		<div class="form-top-right">
+		                        	<p>欢迎购买</p>
+		                        <button type="button" class="btn btn-next" onclick="buyEstate()">购买</button>
+		                        <button type="button" class="btn btn-next" onclick="showBalance()">查看余额</button>		
+                            <!-- <button type="button" class="btn btn-next" onclick="printBlock()">打印区块</button> -->                           
+				                        </div>
+				                       <li>balances:<span id="balances"></span></li>
+				                   
+				                       <!--  <button type="button" class="btn btn-next">下页</button> -->
+				                       
+				                    </div>
+			                    </fieldset>
+			                    
+			                    <!-- <fieldset>
+		                        	<div class="form-top">
+		                        		<div class="form-top-left">
+		                        			<h3>Step 2 / 3</h3>
+		                            		<p>房ww：</p>
+		                        		</div>
+		                        		<div class="form-top-right">
+		                        			<p>房产商</p>
+				                        </div>
+				                        <div class="form-group">
+				                        	<p>房产商:</p>
+				                        <div class="form-group">
+				                        	<p>房产商:</p>
+				                        </div>
+				                        <button type="button" class="btn btn-previous">上页</button>
+				                        <button type="button" class="btn btn-next">下页</button>
+				                        <button type="button" class="btn btn-next">购买</button>
+				                    </div>
+			                    </fieldset>
+			                    
+			                    <fieldset>
+		                        	<div class="form-top">
+		                        		<div class="form-top-left">
+		                        			<h3>Step 3 / 3</h3>
+		                            		<p>用户：</p>
+		                        		</div>
+		                        		<div class="form-top-right">
+		                        			<p>用户</p>
+				                        </div>
+				                        <div class="form-group">
+				                        	<p>用户:</p>
+				                        <div class="form-group">
+				                        	<p>用户:</p>
+				                        </div>
+				                        <button type="button" class="btn btn-previous">上页</button>
+				                        <button type="button" class="btn btn-next">下页</button>
+				                        <button type="button" class="btn btn-next">购买</button>
+				                    </div>
+			                    </fieldset> -->
+		                    
+		                    </form>
+		                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Javascript -->
+        <script src="../public/assets/js/jquery-1.11.1.min.js"></script>
+        <script src="../public/assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../public/assets/js/jquery.backstretch.min.js"></script>
+        <script src="../public/assets/js/retina-1.1.0.min.js"></script>
+        <script src="../public/assets/js/scripts.js"></script>
+       <!--  <script src="../app/app.js"></script> -->
+        <script src="../app/estate_abi.js"></script>
+        <script src="../app/buy_abi.js"></script>
+        <script src="../app/details.js"></script>
+        <script src="../public/js/web3.min.js"></script>
+        
+        <!--[if lt IE 10]>
+            <script src="../public/assets/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
+</html>
